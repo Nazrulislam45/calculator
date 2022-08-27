@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&family=Permanent+Marker&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(236, 240, 243);
+    border: none;
+    outline: none;
+}
+
+#f1{
+    font-family:  cursive;
+}
+
+#f2{
+    font-family: 'Kanit', sans-serif;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+span{
+    position: relative;
+    bottom: -3rem;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #000;
+}
+
+span:hover{
+    transform: scale(1.3);
+    transition: .5s;
+    cursor: none;
+}
+
+.calculator{
+    background-color:rgb(236, 240, 243);         
+    padding: 3.5rem 1.5rem 2rem 1.5rem;
+    border-radius: 25px;
+    box-shadow: inset 5px 5px 15px rgb(255, 255, 255), 10px 10px 15px rgb(0, 0, 0, .5) ;
+    display: grid;
+    grid-template-columns: repeat(4, 60px);
+}
+
+input{
+    grid-column: span 4;
+    background-color: rgb(236, 240, 243);
+    height: 3.5rem;
+    border-radius: 35px;
+    box-shadow: inset -5px -5px 15px rgb(255, 255, 255), inset 5px 5px 15px rgb(0, 0, 0, .7) ;
+    margin-bottom: 1.5rem;
+    padding-left: 20px;
+    color: rgb(26, 26, 26);
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+button{
+	position: relative;
+	color: #000;
+    font-size: 1rem;
+ 	overflow: hidden;
+    height: 2.7rem;
+    width: 2.7rem;
+    margin: .5rem;
+    border-radius: 1.35rem;
+    box-shadow: -5px -5px 10px rgb(255, 255, 255), 5px 5px 10px rgb(0, 0, 0, .15), 0px 0px 5px rgba(110, 110, 110, 0.2) inset;
+    cursor: pointer;
+}
+
+button:after {
+    content: "";
+    background: rgb(136, 136, 136);
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 250%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.5s
+}
+
+button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+.equal{
+    width: 172%;
+}
